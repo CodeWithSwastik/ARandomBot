@@ -11,10 +11,8 @@ async def random_(ctx):
     file = random.choice(os.listdir(outcomes))
     file = os.path.join(outcomes, file)
     with open(file, "r") as f:
-        main = lambda: ''
-        exec(f.read(), locals())
-    
-    await main(ctx)
+        exec(f.read(), globals())
+        await main(ctx)
 
 
 load_dotenv()
