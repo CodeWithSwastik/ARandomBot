@@ -18,4 +18,5 @@ async def random_(ctx):
 
 
 load_dotenv()
+
 bot.run(os.getenv("TOKEN"))
