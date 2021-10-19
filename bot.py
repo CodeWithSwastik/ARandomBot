@@ -15,6 +15,6 @@ async def random_(ctx):
         await main(ctx)
 
 
-load_dotenv()
-
-bot.run(os.getenv("TOKEN"))
+if __name__ == "__main__":
+    load_dotenv()
+    bot.run(os.getenv("TOKEN"))
